@@ -5,6 +5,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { MySkillsComponent } from './myskills/my-skills.component';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,6 @@ import { MySkillsComponent } from './myskills/my-skills.component';
     ProjectsComponent,
     MySkillsComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, ComponentsModule],
 })
 export class PagesModule {}
