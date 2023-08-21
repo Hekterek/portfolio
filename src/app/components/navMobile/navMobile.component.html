@@ -1,5 +1,5 @@
 <div class="bgMenu">
-    <button class="menu" onclick="this.classList.toggle('opened')" aria-label="Main Menu"
+    <button class="menu" [ngClass]="{'opened': menuIsOpen}" aria-label="Main Menu" [disabled]="menuBtnDisable"
         (click)="menuIsOpen = !menuIsOpen; menuSlider[1] === false ? menuIntervalOpen() : menuIntervalClose()">
         <svg width="40" height="40" viewBox="0 0 100 100">
             <path class="line line1"
@@ -13,9 +13,40 @@
 
 <nav class="navContainer" [ngClass]="{'show': menuIsOpen, 'hide': !menuIsOpen}">
     <ul class="listContainer">
-        <li><span class="listElement" [ngClass]="{'slide': menuSlider[1] === true}">About me</span></li>
-        <li><span class="listElement" [ngClass]="{'slide': menuSlider[2]}">My skills</span></li>
-        <li><span class="listElement" [ngClass]="{'slide': menuSlider[3]}">Projects</span></li>
-        <li><span class="listElement" [ngClass]="{'slide': menuSlider[4]}">Contact</span></li>
+        <li>
+            <div class="underLine"
+                [ngClass]="{'underLineBig': underLineSliderSlide[1], 'underLineSmall': !underLineSliderSlide[1] }">
+            </div>
+            <a class="link" (click)="closeMenuAndNavigate('aboutme'); menuIsOpen = !menuIsOpen">
+                <span class="listElement" [ngClass]="{'slide': menuSlider[1] === true}">About me
+                </span>
+            </a>
+        </li>
+        <li>
+            <div class="underLine" [ngClass]="{'underLineBig': underLineSliderSlide[2] }">
+
+            </div>
+            <a class="link">
+                <span class="listElement" [ngClass]="{'slide': menuSlider[2]}">My skills
+                </span>
+            </a>
+        </li>
+        <li>
+            <div class="underLine" [ngClass]="{'underLineBig': underLineSliderSlide[3] }">
+            </div>
+            <a class="link">
+                <span class="listElement" [ngClass]="{'slide': menuSlider[3]}">Projects
+                </span>
+            </a>
+        </li>
+        <li>
+            <div class="underLine" [ngClass]="{'underLineBig': underLineSliderSlide[4] }">
+
+            </div>
+            <a class="link">
+                <span class="listElement" [ngClass]="{'slide': menuSlider[4]}">Contact
+                </span>
+            </a>
+        </li>
     </ul>
 </nav>
