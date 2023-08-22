@@ -26,7 +26,7 @@
             <div class="underLine" [ngClass]="{'underLineBig': underLineSliderSlide[2] }">
 
             </div>
-            <a class="link">
+            <a class="link" (click)="closeMenuAndNavigate('skills'); menuIsOpen = !menuIsOpen">
                 <span class="listElement" [ngClass]="{'slide': menuSlider[2]}">My skills
                 </span>
             </a>
@@ -34,7 +34,7 @@
         <li>
             <div class="underLine" [ngClass]="{'underLineBig': underLineSliderSlide[3] }">
             </div>
-            <a class="link">
+            <a class="link" (click)="closeMenuAndNavigate('projects'); menuIsOpen = !menuIsOpen">
                 <span class="listElement" [ngClass]="{'slide': menuSlider[3]}">Projects
                 </span>
             </a>
@@ -43,7 +43,7 @@
             <div class="underLine" [ngClass]="{'underLineBig': underLineSliderSlide[4] }">
 
             </div>
-            <a class="link">
+            <a class="link" (click)="closeMenuAndNavigate('contact'); menuIsOpen = !menuIsOpen">
                 <span class="listElement" [ngClass]="{'slide': menuSlider[4]}">Contact
                 </span>
             </a>
