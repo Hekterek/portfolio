@@ -12,7 +12,8 @@
                 (mouseover)="listElementBG = ''" (mouseleave)="checkCurrentRoute()"
                 [ngClass]="{'listElementActiveBG': listElementBG === '/aboutme'}">
 
-                <span [ngClass]="{'listElementActive': listElementText === '/aboutme'}">About me</span>
+                <span [ngClass]="{'listElementActive': listElementText === '/aboutme'}">About
+                    me</span>
             </li>
             <li class="listElement" routerLink="skills" (click)="listElementText = '/skills'"
                 [ngClass]="{'listElementActiveBG': listElementBG === '/skills'}" (mouseover)="listElementBG = ''"
