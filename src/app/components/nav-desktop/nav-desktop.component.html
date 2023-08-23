@@ -1,15 +1,34 @@
 <aside class="mainContainer">
     <section class="logoContainer">
-        <p class="logo">CK</p>
+        <a class="logo" routerLink="/" (click)="listElementBG = ''; listElementText = ''">
+            <p>CK</p>
+        </a>
         <p class="fullName">Ciak Karol</p>
         <p class="positionName">Full Stack Developer</p>
     </section>
     <nav class="navContainer">
-        <ul>
-            <li>About me</li>
-            <li>My skills</li>
-            <li>Projects</li>
-            <li>Contact</li>
+        <ul class="list">
+            <li class="listElement" routerLink="aboutme" (click)="listElementText = '/aboutme'"
+                (mouseover)="listElementBG = ''" (mouseleave)="checkCurrentRoute()"
+                [ngClass]="{'listElementActiveBG': listElementBG === '/aboutme'}">
+
+                <span [ngClass]="{'listElementActive': listElementText === '/aboutme'}">About me</span>
+            </li>
+            <li class="listElement" routerLink="skills" (click)="listElementText = '/skills'"
+                [ngClass]="{'listElementActiveBG': listElementBG === '/skills'}" (mouseover)="listElementBG = ''"
+                (mouseleave)="checkCurrentRoute()"><span
+                    [ngClass]="{'listElementActive': listElementText === '/skills'}">My skills</span>
+            </li>
+            <li class="listElement" routerLink="projects" (click)="listElementText = '/projects'"
+                [ngClass]="{'listElementActiveBG': listElementBG === '/projects'}" (mouseover)="listElementBG = ''"
+                (mouseleave)="checkCurrentRoute()"><span
+                    [ngClass]="{'listElementActive': listElementText === '/projects'}">Projects</span>
+            </li>
+            <li class="listElement" routerLink="contact" (click)="listElementText = '/contact'"
+                [ngClass]="{'listElementActiveBG': listElementBG === '/contact'}" (mouseover)="listElementBG = ''"
+                (mouseleave)="checkCurrentRoute()"><span
+                    [ngClass]="{'listElementActive': listElementText === '/contact'}">Contact</span>
+            </li>
         </ul>
     </nav>
 </aside>

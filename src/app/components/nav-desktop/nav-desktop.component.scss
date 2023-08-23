@@ -1,8 +1,21 @@
-@use "../../../partialsScss";
+@use "../../../partialsScss" as scss;
 
 .mainContainer {
+  display: none;
   width: 150px;
   height: 100%;
+
+  @include scss.screen700 {
+    display: block;
+  }
+
+  @include scss.screen900 {
+    width: 170px;
+  }
+
+  @include scss.screen1100 {
+    width: 190px;
+  }
 }
 
 .logoContainer {
@@ -12,8 +25,15 @@
   align-items: center;
   width: 100%;
   height: 190px;
-  background-color: rgb(24, 23, 23);
-  //   border: 1px solid red;
+  background-color: rgb(15, 15, 15);
+
+  @include scss.screen900 {
+    height: 210px;
+  }
+
+  @include scss.screen1100 {
+    height: 220px;
+  }
 
   & .logo {
     margin-top: 60px;
@@ -24,6 +44,15 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include scss.screen900 {
+      margin-top: 70px;
+    }
+    @include scss.screen1100 {
+      transform: scale(4.5);
+      margin-top: 75px;
+      margin-bottom: 30px;
+    }
   }
 
   & .fullName {
@@ -33,13 +62,55 @@
 
   & .positionName {
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     color: gray;
+
+    @include scss.screen900 {
+      bottom: 12px;
+    }
   }
 }
 
 .navContainer {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  padding-top: 15px;
+  background-color: rgb(24, 24, 24);
+  // border: 1px solid red;
+}
+
+.list {
+  width: 100%;
+
+  &:nth-child(1) {
+    border-top: 2px solid rgb(29, 29, 29);
+  }
+
+  & .listElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    color: rgb(97, 97, 97);
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgb(29, 29, 29);
+    border-bottom: 2px solid rgb(29, 29, 29);
+    // border: 1px solid red;
+
+    &:hover {
+      background-color: rgb(29, 29, 29);
+    }
+  }
+}
+
+.listElementActive {
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.listElementActiveBG {
+  background-color: rgb(29, 29, 29);
 }
