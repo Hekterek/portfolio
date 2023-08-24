@@ -2,14 +2,11 @@
 
 .mainContainer {
   display: none;
-  width: 150px;
+  width: 170px;
   height: 100%;
 
-  @include scss.screen700 {
-    display: block;
-  }
-
   @include scss.screen900 {
+    display: block;
     width: 170px;
   }
 
