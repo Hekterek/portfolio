@@ -1,15 +1,26 @@
+@use "../../../partialsScss" as scss;
+
 .mainContainer {
-  display: flex;
-  width: 100%;
+  width: min(100%, 1300px);
   height: 100vh;
   overflow: hidden;
+
+  @include scss.screen900 {
+    display: flex;
+  }
 }
 
 .routerContainer {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 90px);
   padding: 15px;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   // border: 1px solid blue;
+}
+
+.routerContainer::-webkit-scrollbar {
+  display: none;
 }
