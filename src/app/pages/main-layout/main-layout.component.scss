@@ -19,6 +19,10 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   // border: 1px solid blue;
+
+  @include scss.screen900 {
+    height: 100vh;
+  }
 }
 
 .routerContainer::-webkit-scrollbar {
