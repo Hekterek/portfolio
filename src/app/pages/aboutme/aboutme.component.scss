@@ -5,8 +5,9 @@
 .aboutSection {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  //   border: 1px solid red;
+  width: min(100%, 1300px);
+  margin: 0 auto;
+  // border: 1px solid red;
 
   @include scss.screen600 {
     flex-direction: row;
@@ -23,7 +24,7 @@
   & h1 {
     margin: 15px 0 0 15vw;
     font-weight: 600;
-    font-size: scss.$fs-37to65;
+    font-size: scss.$fs-40to80-big;
     color: white;
   }
 
@@ -114,20 +115,27 @@
       transform: translateY(-50px);
     }
   }
+
+  @include scss.screen1100 {
+    margin-right: 180px;
+  }
+
+  @include scss.screen1300 {
+  }
 }
 
 /* ME AND THE CODE SECTION */
 
 .meAndCode {
-  width: 100%;
-  margin-top: 120px;
-  padding: 0 10px;
+  width: min(100%, 1300px);
+  // margin-top: 120px;
+  margin: 120px auto 0 auto;
   //   border: 1px solid blue;
 
   & h2 {
-    margin-left: 10vw;
+    margin-left: 12vw;
     font-weight: 600;
-    font-size: clamp(1.375rem, 0.9189rem + 1.9459vw, 2.5rem);
+    font-size: clamp(1.375rem, 1.0456rem + 1.4054vw, 2.1875rem);
     color: white;
   }
 
@@ -137,23 +145,57 @@
     font-weight: 550;
     color: rgb(209, 209, 209);
   }
+
+  @include scss.screen500 {
+    p {
+      width: 90%;
+      margin-left: 25px;
+    }
+  }
+
+  @include scss.screen600 {
+    margin-top: 0px;
+  }
+
+  @include scss.screen900 {
+    p {
+      margin-left: 35px;
+    }
+  }
+
+  @include scss.screen1100 {
+    p {
+      width: 80%;
+    }
+  }
+
+  @include scss.screen1300 {
+    h2 {
+      margin-left: 130px;
+    }
+
+    p {
+      width: 75%;
+    }
+  }
 }
 
 /* QUICK FACTS SECTION */
 
 .factsContainer {
-  width: 100%;
-  margin-top: 100px;
+  width: min(100%, 1300px);
+  margin-top: 125px;
+  margin: 125px auto 0 auto;
 
   & h2 {
-    margin-left: 10vw;
+    margin-left: 12vw;
     font-weight: 600;
-    font-size: clamp(1.375rem, 0.9189rem + 1.9459vw, 2.5rem);
+    font-size: scss.$fs-22to35-medium;
     color: white;
   }
 
   & .factTitle {
-    margin: 45px 0 0 10px;
+    margin: 45px 0 0 0;
     line-height: 1.6rem;
     font-weight: 600;
     color: white;
@@ -170,10 +212,145 @@
     flex-direction: column;
     font-style: italic;
     font-weight: 200;
+    max-width: 550px;
+    margin-top: 25px;
+    line-height: 1.6rem;
+    color: rgb(209, 209, 209);
 
     & p:nth-of-type(2) {
       margin: 10px 25px 0 0;
       align-self: flex-end;
     }
+  }
+
+  @include scss.screen500 {
+    .factTitle {
+      margin-left: 25px;
+    }
+
+    .factDesc {
+      width: 90%;
+      margin-left: 25px;
+    }
+
+    .favQuote {
+      margin-left: 25px;
+    }
+  }
+
+  @include scss.screen900 {
+    .factTitle,
+    .factDesc {
+      max-width: 60%;
+      margin-left: 35px;
+    }
+
+    .favQuote {
+      margin-left: 35px;
+    }
+  }
+
+  @include scss.screen1100 {
+    .factDesc {
+      width: 60%;
+    }
+  }
+
+  @include scss.screen1300 {
+    h2 {
+      margin-left: 130px;
+    }
+
+    .factDesc {
+      width: 75%;
+    }
+  }
+}
+
+/* RULES SECTION */
+
+.rules {
+  width: min(100%, 1300px);
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin: 80px auto 80px auto;
+
+  & h2 {
+    margin-left: 10vw;
+    font-weight: 600;
+    font-size: scss.$fs-22to35-medium;
+    color: white;
+  }
+
+  & .ruleTitle {
+    margin: 45px 0 0 0;
+    line-height: 1.6rem;
+    font-weight: 600;
+    color: white;
+  }
+
+  & .ruleDesc {
+    margin-top: 25px;
+    line-height: 1.6rem;
+    color: rgb(209, 209, 209);
+  }
+
+  @include scss.screen500 {
+    .ruleTitle {
+      margin-left: 25px;
+    }
+
+    .ruleDesc {
+      width: 90%;
+      margin-left: 25px;
+    }
+  }
+
+  @include scss.screen900 {
+    .ruleTitle {
+      margin-left: 35px;
+    }
+
+    .ruleDesc {
+      max-width: 65%;
+      margin-left: 35px;
+    }
+  }
+
+  // @include scss.screen1100 {
+  //   .ruleDesc {
+  //     // width: 80%;
+  //   }
+  // }
+
+  @include scss.screen1300 {
+    h2 {
+      margin-left: 130px;
+    }
+  }
+}
+
+/* THANKS */
+
+.thanksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: min(100%, 1300px);
+
+  & p {
+    margin: 80px 0 0 0;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.6rem;
+    font-weight: 500;
+    color: white;
+  }
+
+  @include scss.screen1300 {
+    justify-content: flex-start;
+    padding-left: 250px;
   }
 }

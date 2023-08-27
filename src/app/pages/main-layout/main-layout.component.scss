@@ -1,7 +1,8 @@
 @use "../../../partialsScss" as scss;
 
 .mainContainer {
-  width: min(100%, 1300px);
+  // width: min(100%, 1300px);
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 
@@ -11,20 +12,18 @@
 }
 
 .routerContainer {
+  // display: flex;
+  // justify-content: center;
   position: relative;
   width: 100%;
   height: calc(100vh - 90px);
   padding: 15px;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow-y: auto;
+  // -ms-overflow-style: none;
+  // scrollbar-width: none;
   // border: 1px solid blue;
 
   @include scss.screen900 {
     height: 100vh;
   }
-}
-
-.routerContainer::-webkit-scrollbar {
-  display: none;
 }

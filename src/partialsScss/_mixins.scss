@@ -35,3 +35,22 @@
     @content;
   }
 }
+@mixin screen1400 {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin screen1500 {
+  @media screen and (min-width: 1500px) {
+    @content;
+  }
+}
+@mixin screen1600 {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin debug {
+  border: 1px solid red;
+}

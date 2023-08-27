@@ -1,14 +1,19 @@
 @use "../../../partialsScss" as scss;
 
 .headerContainer {
-  position: relative;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 45px;
-  padding-right: 25px;
   width: 100%;
   height: 90px;
+  z-index: 1;
+  padding-left: 45px;
+  padding-right: 25px;
+  background-color: #1d1d1d;
+  box-shadow: 0 0 4px 1px gray;
 
   @include scss.screen900 {
     display: none;

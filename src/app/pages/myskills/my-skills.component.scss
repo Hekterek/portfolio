@@ -1,0 +1,11 @@
+.headerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(100%, 1300px);
+
+  & .brain {
+    width: 275px;
+    opacity: 0.6;
+  }
+}

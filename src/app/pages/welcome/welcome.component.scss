@@ -1,59 +1,132 @@
 @use "../../../partialsScss" as scss;
 
+.welcomeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 1300px);
+  margin: 0 auto;
+
+  // @include scss.debug;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include scss.screen600 {
+  }
+
+  // @include scss.debug;
+}
+
 .title {
-  margin: 100px 0 0 30px;
+  margin: 55px 0 0 15px;
+  line-height: 3rem;
   font-weight: 500;
-  font-size: clamp(2.3125rem, 1.603rem + 3.027vw, 4.0625rem);
-  line-height: 43px;
+  font-size: scss.$fs-40to80-big;
   color: white;
-  //   border: 1px solid red;
+  // @include scss.debug;
 
   @include scss.screen500 {
-    line-height: 48px;
+    line-height: 3.3rem;
   }
+
+  @include scss.screen600 {
+    line-height: 3.8rem;
+  }
+
   @include scss.screen700 {
-    margin-left: 40px;
-    line-height: 53px;
+    line-height: 4.2rem;
   }
+
   @include scss.screen900 {
-    margin-left: 50px;
-    line-height: 58px;
+    margin: 80px 0 0 15px;
+    line-height: 4.8rem;
   }
+
   @include scss.screen1100 {
-    line-height: 63px;
+    line-height: 5.7rem;
   }
-  @include scss.screen1300 {
-    line-height: 68px;
+  @include scss.screen1400 {
+    margin: 140px 0 0 0px;
+    line-height: 3.2rem;
+  }
+}
+
+.titleFirst {
+  font-size: clamp(3.75rem, 2.8632rem + 3.7838vw, 5.9375rem);
+}
+
+.titleSecond {
+  margin: 0 0 0 5vw;
+  // font-size: 18px;
+
+  @include scss.screen1400 {
+    margin: 0 0 0 160px;
+  }
+}
+
+.titleThird {
+  margin: 0 0 0 9vw;
+
+  @include scss.screen1400 {
+    margin: 0 0 0 520px;
   }
 }
 
 .underTitle {
-  margin: 10px 0 0 30px;
-  color: gray;
+  margin: 5px 0 0 65px;
+  color: rgb(138, 137, 137);
 
-  @include scss.screen700 {
-    margin-left: 40px;
+  @include scss.screen600 {
+    margin: 7px 0 0 55px;
+    font-size: 22px;
   }
-  @include scss.screen900 {
-    margin-left: 50px;
+
+  @include scss.screen1400 {
+    transform: translateY(-15px);
+    margin: 0px 440px 0px 0px;
   }
 }
 
-.contactBtn {
-  position: relative;
-  width: 180px;
-  height: 40px;
-  margin: 150px 0 0 40px;
-  z-index: 0;
-  -webkit-tap-highlight-color: transparent;
-  background-color: transparent;
-  //   border: 1px solid blue;
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 16px;
   color: white;
 
-  @include scss.screen700 {
-    margin-left: 50px;
+  // @include scss.debug;
+
+  & p {
+    text-align: center;
   }
-  @include scss.screen900 {
-    margin-left: 60px;
+
+  & p:nth-of-type(1) {
+  }
+
+  & p:nth-of-type(2) {
+    margin-top: 15px;
+  }
+
+  & .contactBtn {
+    margin-top: 100px;
+    width: 250px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid gray;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: gray;
+      color: black;
+    }
   }
 }

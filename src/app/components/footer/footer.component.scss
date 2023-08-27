@@ -1,0 +1,23 @@
+@use "../../../partialsScss" as scss;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(100%, 1300px);
+  height: 100px;
+  margin-top: 80px;
+  margin: 80px auto 0 auto;
+  color: white;
+  font-weight: 300;
+
+  & a {
+    color: white;
+  }
+
+  @include scss.screen1300 {
+    justify-content: flex-start;
+    padding-left: 390px;
+    // transform: translateX(-100px);
+  }
+}
