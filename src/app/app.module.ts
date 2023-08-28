@@ -7,6 +7,7 @@ import { ComponentsModule } from './components/components.module';
 import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     PagesModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

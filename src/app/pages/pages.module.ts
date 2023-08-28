@@ -8,6 +8,8 @@ import { MySkillsComponent } from './myskills/my-skills.component';
 import { ComponentsModule } from '../components/components.module';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,12 @@ import { RouterModule } from '@angular/router';
     MySkillsComponent,
     MainLayoutComponent,
   ],
-  imports: [CommonModule, ComponentsModule, RouterModule],
+  imports: [
+    CommonModule,
+    ComponentsModule,
+    RouterModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
 })
 export class PagesModule {}
