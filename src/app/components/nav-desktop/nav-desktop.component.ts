@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,7 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-desktop.component.scss'],
 })
 export class NavDesktopComponent implements OnInit {
-  listElementBG: string = '';
   listElementText: string = '';
 
   constructor(private router: Router) {}
@@ -17,7 +17,6 @@ export class NavDesktopComponent implements OnInit {
   }
 
   checkCurrentRoute() {
-    this.listElementBG = this.router.url;
     this.listElementText = this.router.url;
   }
 }

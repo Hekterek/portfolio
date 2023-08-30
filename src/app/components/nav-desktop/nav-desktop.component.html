@@ -1,33 +1,27 @@
 <aside class="mainContainer">
     <section class="logoContainer">
-        <a class="logo" routerLink="/" (click)="listElementBG = ''; listElementText = ''">
-            <p>CK</p>
+        <a class="logo" routerLink="/" (click)=" listElementText = ''">
+            <div class="logoBox">
+                <p>C</p>
+                <p>K</p>
+            </div>
         </a>
         <p class="fullName">Ciak Karol</p>
         <p class="positionName">Full Stack Developer</p>
     </section>
     <nav class="navContainer">
         <ul class="list">
-            <li class="listElement" routerLink="aboutme" (click)="listElementText = '/aboutme'"
-                (mouseover)="listElementBG = ''" (mouseleave)="checkCurrentRoute()"
-                [ngClass]="{'listElementActiveBG': listElementBG === '/aboutme'}">
-
+            <li class="listElement" routerLink="aboutme" (click)="listElementText = '/aboutme'">
                 <span [ngClass]="{'listElementActive': listElementText === '/aboutme'}">About
                     me</span>
             </li>
-            <li class="listElement" routerLink="skills" (click)="listElementText = '/skills'"
-                [ngClass]="{'listElementActiveBG': listElementBG === '/skills'}" (mouseover)="listElementBG = ''"
-                (mouseleave)="checkCurrentRoute()"><span
+            <li class="listElement" routerLink="skills" (click)="listElementText = '/skills'"><span
                     [ngClass]="{'listElementActive': listElementText === '/skills'}">My skills</span>
             </li>
-            <li class="listElement" routerLink="projects" (click)="listElementText = '/projects'"
-                [ngClass]="{'listElementActiveBG': listElementBG === '/projects'}" (mouseover)="listElementBG = ''"
-                (mouseleave)="checkCurrentRoute()"><span
+            <li class="listElement" routerLink="projects" (click)="listElementText = '/projects'"><span
                     [ngClass]="{'listElementActive': listElementText === '/projects'}">Projects</span>
             </li>
-            <li class="listElement" routerLink="contact" (click)="listElementText = '/contact'"
-                [ngClass]="{'listElementActiveBG': listElementBG === '/contact'}" (mouseover)="listElementBG = ''"
-                (mouseleave)="checkCurrentRoute()"><span
+            <li class="listElement" routerLink="contact" (click)="listElementText = '/contact'"><span
                     [ngClass]="{'listElementActive': listElementText === '/contact'}">Contact</span>
             </li>
         </ul>

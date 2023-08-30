@@ -26,7 +26,8 @@
   align-items: center;
   width: 100%;
   height: 190px;
-  background-color: rgb(15, 15, 15);
+  margin-top: 35px;
+  // background-color: rgb(15, 15, 15);
 
   @include scss.screen900 {
     height: 210px;
@@ -37,33 +38,72 @@
   }
 
   & .logo {
-    margin-top: 60px;
-    margin-bottom: 25px;
-    font-family: "Average", serif;
-    transform: scale(4);
-    background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // margin-top: 60px;
+    // margin-bottom: 25px;
+    // font-family: "Average", serif;
+    // transform: scale(4);
+    // background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+    // -webkit-background-clip: text;
+    // background-clip: text;
+    // -webkit-text-fill-color: transparent;
 
     @include scss.screen900 {
-      margin-top: 70px;
+      // margin-top: 70px;
     }
     @include scss.screen1100 {
-      transform: scale(4.5);
-      margin-top: 75px;
-      margin-bottom: 30px;
+      // transform: scale(4.5);
+      // margin-top: 75px;
+      // margin-bottom: 30px;
+    }
+
+    & .logoBox {
+      position: relative;
+      height: 110px;
+      font-family: "Shalimar", cursive;
+      font-size: 7rem;
+      // rotate: 15deg;
+
+      // @include scss.debug;
+
+      & p {
+        background: linear-gradient(
+          to bottom left,
+          #1e9ec6 30%,
+          #a936b8b6 65%,
+          rgba(0, 0, 0, 0.959) 90%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(7px 4px 2px black);
+      }
+
+      & p:nth-of-type(1) {
+        font-size: 8rem;
+        // rotate: -15deg;
+      }
+      & p:nth-of-type(2) {
+        position: absolute;
+        top: 35px;
+        left: 25px;
+        font-size: 4rem;
+        rotate: -15deg;
+      }
     }
   }
 
   & .fullName {
-    font-size: 13px;
+    font-family: "Shalimar", cursive;
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
     color: white;
   }
 
   & .positionName {
-    position: absolute;
-    bottom: 15px;
+    // position: absolute;
+    // bottom: 15px;
+    margin-top: 10px;
     color: gray;
 
     @include scss.screen900 {
@@ -75,18 +115,14 @@
 .navContainer {
   width: 100%;
   height: 100%;
-  padding-top: 15px;
-  background-color: rgb(24, 24, 24);
+  padding-top: 50px;
+  // background-color: rgb(24, 24, 24);
   // border: 1px solid red;
 }
 
 .list {
   width: 100%;
   font-size: 18px;
-
-  &:nth-child(1) {
-    border-top: 2px solid rgb(29, 29, 29);
-  }
 
   & .listElement {
     display: flex;
@@ -97,12 +133,7 @@
     color: rgb(97, 97, 97);
     cursor: pointer;
     -webkit-tap-highlight-color: rgb(29, 29, 29);
-    border-bottom: 2px solid rgb(29, 29, 29);
     // border: 1px solid red;
-
-    &:hover {
-      background-color: rgb(29, 29, 29);
-    }
   }
 }
 

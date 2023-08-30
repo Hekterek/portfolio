@@ -1,4 +1,4 @@
-@use "../../../partialsScss" as scss;
+@use "../../../partialsScss" as *;
 
 .welcomeSection {
   display: flex;
@@ -7,7 +7,19 @@
   width: min(100%, 1300px);
   margin: 0 auto;
 
-  // @include scss.debug;
+  // @include debug;
+
+  @include screen1100 {
+    padding-right: 50px;
+  }
+
+  @include screen1300 {
+    padding-right: 80px;
+  }
+
+  @include screen1600 {
+    padding-right: 200px;
+  }
 }
 
 .mainContent {
@@ -15,41 +27,41 @@
   flex-direction: column;
   align-items: center;
 
-  @include scss.screen600 {
+  @include screen600 {
   }
 
-  // @include scss.debug;
+  // @include debug;
 }
 
 .title {
   margin: 55px 0 0 15px;
   line-height: 3rem;
   font-weight: 500;
-  font-size: scss.$fs-40to80-big;
+  font-size: $fs-40to80-big;
   color: white;
   // @include scss.debug;
 
-  @include scss.screen500 {
+  @include screen500 {
     line-height: 3.3rem;
   }
 
-  @include scss.screen600 {
+  @include screen600 {
     line-height: 3.8rem;
   }
 
-  @include scss.screen700 {
+  @include screen700 {
     line-height: 4.2rem;
   }
 
-  @include scss.screen900 {
+  @include screen900 {
     margin: 80px 0 0 15px;
     line-height: 4.8rem;
   }
 
-  @include scss.screen1100 {
+  @include screen1100 {
     line-height: 5.7rem;
   }
-  @include scss.screen1400 {
+  @include screen1400 {
     margin: 140px 0 0 0px;
     line-height: 3.2rem;
   }
@@ -63,7 +75,7 @@
   margin: 0 0 0 5vw;
   // font-size: 18px;
 
-  @include scss.screen1400 {
+  @include screen1400 {
     margin: 0 0 0 160px;
   }
 }
@@ -71,7 +83,7 @@
 .titleThird {
   margin: 0 0 0 9vw;
 
-  @include scss.screen1400 {
+  @include screen1400 {
     margin: 0 0 0 520px;
   }
 }
@@ -80,12 +92,12 @@
   margin: 5px 0 0 65px;
   color: rgb(138, 137, 137);
 
-  @include scss.screen600 {
+  @include screen600 {
     margin: 7px 0 0 55px;
     font-size: 22px;
   }
 
-  @include scss.screen1400 {
+  @include screen1400 {
     transform: translateY(-15px);
     margin: 0px 440px 0px 0px;
   }
@@ -99,7 +111,7 @@
   font-size: 16px;
   color: white;
 
-  // @include scss.debug;
+  // @include debug;
 
   & p {
     text-align: center;
