@@ -6,7 +6,7 @@
   height: 100vh;
   overflow: hidden;
   // background: radial-gradient(#a23982, #1f1013);
-  background: radial-gradient(#145273 0%, #000000 90%);
+  // background: radial-gradient(rgb(20, 82, 115) 0%, #000000 90%);
   @include screen900 {
     display: flex;
   }
@@ -95,8 +95,8 @@
   position: relative;
   top: 100px;
   right: 130px;
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   // background-color: gray;
   // background: linear-gradient(
   //   200deg,
