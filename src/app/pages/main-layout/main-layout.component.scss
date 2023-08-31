@@ -55,6 +55,7 @@
 }
 
 .lampBtn {
+  display: none;
   position: absolute;
   top: 26px;
   right: 55px;
@@ -72,10 +73,13 @@
     background: radial-gradient(at center, rgb(133, 122, 122) 10%, #000000);
   }
 
-  // @include debug;
+  @include screen1100 {
+    display: block;
+  }
 }
 
 .lampLight {
+  display: none;
   z-index: 50;
   position: absolute;
   top: 110px;
@@ -88,9 +92,14 @@
   border-left: 70px solid transparent;
   transform: rotate(-15deg);
   overflow: hidden;
+
+  @include screen1100 {
+    display: block;
+  }
 }
 
 .light {
+  display: none;
   // z-index: 4;
   position: relative;
   top: 100px;
@@ -104,4 +113,8 @@
   //   rgba(255, 255, 255, 0) 70%
   // );
   clip-path: polygon(0 36%, 100% 0, 56% 100%, 14% 76%);
+
+  @include screen1100 {
+    display: block;
+  }
 }
