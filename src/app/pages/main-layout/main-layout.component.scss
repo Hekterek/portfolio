@@ -1,4 +1,4 @@
-@use "../../../partialsScss" as scss;
+@use "../../../partialsScss" as *;
 
 .mainContainer {
   // width: min(100%, 1300px);
@@ -6,8 +6,8 @@
   height: 100vh;
   overflow: hidden;
   // background: radial-gradient(#a23982, #1f1013);
-  background: radial-gradient(#145273 0%, #000000 90%) center repeat;
-  @include scss.screen900 {
+  background: radial-gradient(#145273 0%, #000000 90%);
+  @include screen900 {
     display: flex;
   }
 }
@@ -24,16 +24,84 @@
   // scrollbar-width: none;
   // border: 1px solid blue;
 
-  @include scss.screen900 {
+  @include screen900 {
     height: 100vh;
   }
 }
 
+.lampContainer {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  // width: 250px;
+  // @include debug;
+}
+
 .lamp {
+  z-index: 2;
+  display: none;
   position: fixed;
-  top: -80px;
-  right: -30px;
-  width: 300px;
-  margin-left: 45vw;
-  transform: rotate(10deg);
+  top: -18px;
+  right: 20px;
+  width: 180px;
+  // margin-left: 45vw;
+  // transform: rotate(10deg);
+
+  // @include debug;
+
+  @include screen1100 {
+    display: block;
+  }
+}
+
+.lampBtn {
+  position: absolute;
+  top: 26px;
+  right: 55px;
+  z-index: 6;
+  width: 22px;
+  height: 22px;
+  transform: skew(20deg);
+  background: #f50101;
+  background: radial-gradient(at center, #1e9ec6 30%, #000000);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    background: radial-gradient(at center, rgb(133, 122, 122) 10%, #000000);
+  }
+
+  // @include debug;
+}
+
+.lampLight {
+  z-index: 50;
+  position: absolute;
+  top: 110px;
+  right: 100px;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 100px solid rgba(255, 0, 0, 0.219);
+  border-right: 80px solid transparent;
+  border-left: 70px solid transparent;
+  transform: rotate(-15deg);
+  overflow: hidden;
+}
+
+.light {
+  // z-index: 4;
+  position: relative;
+  top: 100px;
+  right: 130px;
+  width: 150px;
+  height: 150px;
+  // background-color: gray;
+  // background: linear-gradient(
+  //   200deg,
+  //   rgba(255, 20, 51, 0.87),
+  //   rgba(255, 255, 255, 0) 70%
+  // );
+  clip-path: polygon(0 36%, 100% 0, 56% 100%, 14% 76%);
 }

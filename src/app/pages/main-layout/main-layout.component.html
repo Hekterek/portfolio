@@ -1,5 +1,10 @@
 <div class="mainContainer" #layout [style.background-position]="position">
-    <img class="lamp" src="../../../assets/photos/lampDiscoDone.png" alt="lamp">
+    <div class="lampContainer">
+        <div class="light" [style]="lightColor"></div>
+        <img class="lamp" src="../../../assets/photos/lampDiscoDone.png" alt="lamp">
+        <button class="lampBtn" (click)="changeLightColor()"></button>
+    </div>
+
     <app-navMobile></app-navMobile>
     <app-nav-desktop></app-nav-desktop>
     <main class="routerContainer">
