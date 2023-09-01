@@ -1,3 +1,14 @@
 <section class="headerSection">
-    <img class="brain" src="./assets/photos/brain.png" alt="Brain picture">
+    <div class="titleContainer">
+        <p>From Concept to Code </p>
+        <p>Sculpting Ideas into Digital Realms</p>
+    </div>
+    <div class="iconsContainer">
+        <ul class="mainIcons">
+            <li class="mainIcon" *ngFor="let icon of mainIcons"><img [src]="icon" alt="icon"></li>
+        </ul>
+        <ul class="otherIcons">
+            <li class="icon" *ngFor="let icon of otherIcons"><img [src]="icon" alt="icon"></li>
+        </ul>
+    </div>
 </section>

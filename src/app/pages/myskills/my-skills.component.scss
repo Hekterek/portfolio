@@ -1,11 +1,109 @@
+@use "../../../partialsScss" as *;
+
 .headerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 1500px);
+  margin: 0 auto;
+  // border: 1px solid red;
+
+  @include screen900 {
+    padding-right: 100px;
+  }
+
+  @include screen1300 {
+    padding-right: 150px;
+  }
+
+  @include screen1500 {
+    padding-right: 200px;
+  }
+}
+
+.titleContainer {
+  color: $clr-white;
+  text-align: center;
+  padding-top: 40px;
+
+  @include screen900 {
+    padding-top: 80px;
+  }
+
+  & p:nth-of-type(1) {
+    font-weight: 500;
+    font-size: $fs-22to35-medium;
+  }
+
+  & p:nth-of-type(2) {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  // border: 1px solid red;
+}
+
+.mainIcons {
+  display: flex;
+  justify-content: space-evenly;
+  width: min(100%, 600px);
+  margin-top: 45px;
+
+  // border: 1px solid blue;
+
+  @include screen900 {
+    margin-top: 50px;
+  }
+}
+
+.mainIcon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min(100%, 1300px);
+  width: 90px;
 
-  & .brain {
-    width: 275px;
-    opacity: 0.6;
+  // border: 1px solid red;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.otherIcons {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  flex-wrap: wrap;
+  margin-top: 85px;
+  gap: 15px;
+  width: min(90%, 900px);
+
+  // @include screen700 {
+  //   width: 90%;
+  // }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+
+  & img {
+    width: 100%;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  @include screen1600 {
+    width: 80px;
   }
 }
