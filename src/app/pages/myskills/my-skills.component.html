@@ -5,7 +5,9 @@
     </div>
     <div class="iconsContainer">
         <ul class="mainIcons">
-            <li class="mainIcon" *ngFor="let icon of mainIcons"><img [src]="icon" alt="icon"></li>
+            <li class="mainIcon" *ngFor="let icon of mainIcons"><img [src]="icon" alt="icon">
+                <div class="shadow"></div>
+            </li>
         </ul>
         <ul class="otherIcons">
             <li class="icon" *ngFor="let icon of otherIcons"><img [src]="icon" alt="icon"></li>
