@@ -5,12 +5,17 @@
     </div>
     <div class="iconsContainer">
         <ul class="mainIcons">
-            <li class="mainIcon" *ngFor="let icon of mainIcons"><img [src]="icon" alt="icon">
+            <li class="mainIcon" *ngFor="let icon of mainIcons">
+                <img [src]="icon.url" [alt]="icon.name + ' icon'" [@pulse]="mainIconsState[icon.name]"
+                    (mouseover)="mainIconsChangeState(icon.name)">
                 <div class="shadow"></div>
             </li>
         </ul>
         <ul class="otherIcons">
-            <li class="icon" *ngFor="let icon of otherIcons"><img [src]="icon" alt="icon"></li>
+            <li class="icon" *ngFor="let icon of otherIcons">
+                <img [src]="icon.url" [alt]="icon.name + ' icon'" [@flip]="otherIconsState[icon.name]"
+                    (mouseover)="otherIconsChangeState(icon.name)">
+            </li>
         </ul>
     </div>
 </section>

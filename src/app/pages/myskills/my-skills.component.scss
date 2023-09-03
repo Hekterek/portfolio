@@ -109,10 +109,6 @@
 
   & img {
     width: 100%;
-
-    &:hover {
-      transform: scale(1.5);
-    }
   }
 
   @include screen1600 {
