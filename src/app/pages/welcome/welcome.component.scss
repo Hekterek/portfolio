@@ -1,5 +1,9 @@
 @use "../../../partialsScss" as *;
 
+.titleLetter {
+  display: inline-block;
+}
+
 .welcomeSection {
   display: flex;
   flex-direction: column;

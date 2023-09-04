@@ -1,16 +1,29 @@
 <section class="welcomeSection">
     <div class="mainContent">
         <h1 class="title">
-            <span class="titleFirst">Hi !</span>
+            <span class="titleFirst">
+                <p class="titleLetter" *ngFor="let letter of titleFirst; let i = index" [@bounce]="animatedLetters[i]">
+                    {{ letter }}
+                    <span *ngIf="i === 2">&nbsp;</span>
+                </p>
+            </span>
             <br>
-            <span class="titleSecond">I'm Karol,</span> <br>
-            <span class="titleThird">Web Developer</span>
+            <span class="titleSecond">
+                <p class="titleLetter" *ngFor="let letter of titleSecond; let i = index"
+                    [@bounce]="animatedLetters[i + titleFirst.length]">{{ letter }}
+                    <span *ngIf="i === 3">&nbsp;</span>
+                </p>
+            </span>
+            <br>
+            <span class="titleThird">
+                <p class="titleLetter" *ngFor="let letter of titleThird; let i = index"
+                    [@bounce]="animatedLetters[i + titleFirst.length + titleSecond.length]">
+                    {{ letter }}
+                    <span *ngIf="i === 3">&nbsp;</span>
+                </p>
+            </span>
         </h1>
-
         <p class="underTitle">JavaScript / Java Developer</p>
-
-
-
         <div class="info">
             <p>A great enthusiast of websites and web applications</p>
             <p>Thanks for visiting and enjoy scrolling</p>
