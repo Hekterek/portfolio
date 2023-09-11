@@ -278,6 +278,34 @@
     margin-top: 40px;
   }
 
+  @include screen900 {
+    &:hover {
+      color: rgba(78, 78, 78, 0.8);
+      // color: transparent;
+      text-shadow: none;
+      animation: none;
+    }
+
+    &:hover .glowing-txt {
+      animation: none;
+    }
+
+    &:hover .faulty-letter {
+      animation: none;
+      text-shadow: none;
+      opacity: 1;
+    }
+
+    &:hover:before {
+      filter: blur(1.5em);
+      opacity: 1;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+
   @include screen1200 {
     margin-top: 60px;
   }
@@ -329,30 +357,4 @@
   background-color: hsl(186 100% 69%);
   box-shadow: 0 0 2em 0.2em hsl(186 100% 69%);
   transition: opacity 100ms linear;
-}
-
-.glowing-btn:hover {
-  color: rgba(0, 0, 0, 0.8);
-  // color: transparent;
-  text-shadow: none;
-  animation: none;
-}
-
-.glowing-btn:hover .glowing-txt {
-  animation: none;
-}
-
-.glowing-btn:hover .faulty-letter {
-  animation: none;
-  text-shadow: none;
-  opacity: 1;
-}
-
-.glowing-btn:hover:before {
-  filter: blur(1.5em);
-  opacity: 1;
-}
-
-.glowing-btn:hover:after {
-  opacity: 1;
 }
