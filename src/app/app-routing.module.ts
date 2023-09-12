@@ -7,6 +7,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { AboutmeService, image } from './services/aboutme.service';
+import { iconsResolve } from './services/my-skills.service';
 
 const routes: Routes = [
   {
@@ -19,7 +20,11 @@ const routes: Routes = [
         component: AboutmeComponent,
         resolve: { imageData: image },
       },
-      { path: 'skills', component: MySkillsComponent },
+      {
+        path: 'skills',
+        component: MySkillsComponent,
+        resolve: { icons: iconsResolve },
+      },
       { path: 'projects', component: ProjectsComponent },
       { path: 'contact', component: ContactComponent },
     ],

@@ -17,6 +17,9 @@ export class AboutmeComponent implements OnInit {
 
   loadPicture(): void {
     const img = this.activatedRoute.snapshot.data['imageData'];
+    // console.log(img);
+
     this.imageUrl = URL.createObjectURL(img);
+    // console.log(this.imageUrl);
   }
 }

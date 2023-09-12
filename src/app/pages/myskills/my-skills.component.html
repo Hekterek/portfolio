@@ -13,7 +13,7 @@
         </ul>
         <ul class="otherIcons">
             <li class="icon" *ngFor="let icon of otherIcons">
-                <img [src]="icon.url" [alt]="icon.name + ' icon'" [@flip]="otherIconsState[icon.name]"
+                <img [src]="icon.imgBlob" [alt]="icon.name + ' icon'" [@flip]="otherIconsState[icon.name]"
                     (mouseover)="otherIconsChangeState(icon.name)">
             </li>
         </ul>

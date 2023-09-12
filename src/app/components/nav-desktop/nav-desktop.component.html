@@ -11,17 +11,17 @@
     </section>
     <nav class="navContainer">
         <ul class="list">
-            <li class="listElement" routerLink="aboutme" (click)="listElementText = '/aboutme'">
+            <li class="listElement" routerLink="aboutme">
                 <span [ngClass]="{'listElementActive': listElementText === '/aboutme'}">About
                     me</span>
             </li>
-            <li class="listElement" routerLink="skills" (click)="listElementText = '/skills'"><span
+            <li class="listElement" routerLink="skills"><span
                     [ngClass]="{'listElementActive': listElementText === '/skills'}">My skills</span>
             </li>
-            <li class="listElement" routerLink="projects" (click)="listElementText = '/projects'"><span
+            <li class="listElement" routerLink="projects"><span
                     [ngClass]="{'listElementActive': listElementText === '/projects'}">Projects</span>
             </li>
-            <li class="listElement" routerLink="contact" (click)="listElementText = '/contact'"><span
+            <li class="listElement" routerLink="contact"><span
                     [ngClass]="{'listElementActive': listElementText === '/contact'}">Contact</span>
             </li>
         </ul>
