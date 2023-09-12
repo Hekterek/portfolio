@@ -19,8 +19,8 @@ import {
 })
 export class MySkillsComponent implements OnInit {
   mainIcons: mainIconsModel[] = [
-    { url: '../../../assets/icons/java.png', name: 'java' },
-    { url: '../../../assets/icons/angular.png', name: 'angular' },
+    { url: './assets/icons/java.png', name: 'java' },
+    { url: './assets/icons/angular.png', name: 'angular' },
   ];
 
   otherIcons: otherIconsResolveUrlModel[] = [];

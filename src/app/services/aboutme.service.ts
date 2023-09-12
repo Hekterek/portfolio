@@ -10,7 +10,7 @@ export class AboutmeService {
 }
 
 export const image: ResolveFn<Blob> = () => {
-  return inject(HttpClient).get('../../assets/photos/picture.PNG', {
+  return inject(HttpClient).get('./assets/photos/picture.PNG', {
     responseType: 'blob',
   });
 };
