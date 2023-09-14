@@ -1,6 +1,9 @@
 <header class="headerContainer">
-    <a class="logo" routerLink="/">
-        <p>CK</p>
+    <a class="logo" routerLink="/" (click)="menuIsOpen = false; menuIntervalClose()">
+        <div class="logoBox">
+            <p>C</p>
+            <p>K</p>
+        </div>
     </a>
     <div class="bgMenu">
         <button class="menu" [ngClass]="{'opened': menuIsOpen}" aria-label="Main Menu" [disabled]="menuBtnDisable"

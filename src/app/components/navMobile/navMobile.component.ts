@@ -47,24 +47,24 @@ export class NavMobileComponent implements OnInit {
   underLineSliderTimeout(el: string, value: boolean, time: number) {
     setTimeout(() => {
       this.underLineSliderSlide[el] = value;
-    }, time + 300);
+    }, time + 200);
   }
 
   menuIntervalOpen() {
     this.menuSwitch();
     for (const el in this.menuSlider) {
       if (el === '1') {
-        this.menuSliderTimeout(el, true, 300);
-        this.underLineSliderTimeout(el, true, 300);
+        this.menuSliderTimeout(el, true, 50);
+        this.underLineSliderTimeout(el, true, 50);
       } else if (el === '2') {
-        this.menuSliderTimeout(el, true, 500);
-        this.underLineSliderTimeout(el, true, 500);
+        this.menuSliderTimeout(el, true, 100);
+        this.underLineSliderTimeout(el, true, 100);
       } else if (el === '3') {
-        this.menuSliderTimeout(el, true, 700);
-        this.underLineSliderTimeout(el, true, 700);
+        this.menuSliderTimeout(el, true, 150);
+        this.underLineSliderTimeout(el, true, 150);
       } else if (el === '4') {
-        this.menuSliderTimeout(el, true, 900);
-        this.underLineSliderTimeout(el, true, 900);
+        this.menuSliderTimeout(el, true, 200);
+        this.underLineSliderTimeout(el, true, 200);
       }
     }
   }
@@ -74,16 +74,16 @@ export class NavMobileComponent implements OnInit {
     for (const el in this.menuSlider) {
       if (el === '1') {
         this.menuSliderTimeout(el, false, 0);
-        this.underLineSliderTimeout(el, false, -300);
+        this.underLineSliderTimeout(el, false, -100);
       } else if (el === '2') {
+        this.menuSliderTimeout(el, false, 100);
+        this.underLineSliderTimeout(el, false, -100);
+      } else if (el === '3') {
         this.menuSliderTimeout(el, false, 200);
         this.underLineSliderTimeout(el, false, -200);
-      } else if (el === '3') {
-        this.menuSliderTimeout(el, false, 300);
-        this.underLineSliderTimeout(el, false, -100);
       } else if (el === '4') {
-        this.menuSliderTimeout(el, false, 400);
-        this.underLineSliderTimeout(el, false, -100);
+        this.menuSliderTimeout(el, false, 300);
+        this.underLineSliderTimeout(el, false, -300);
       }
     }
   }
