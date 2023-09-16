@@ -7,22 +7,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./navMobile.component.scss'],
 })
 export class NavMobileComponent implements OnInit {
-  protected menuIsOpen: boolean = true;
+  protected menuIsOpen: boolean = false;
 
   menuBtnDisable: boolean = false;
 
   menuSlider: { [key: string]: boolean } = {
-    1: true,
-    2: true,
-    3: true,
-    4: true,
+    1: false,
+    2: false,
+    3: false,
+    4: false,
   };
 
   underLineSliderSlide: { [key: string]: boolean } = {
-    1: true,
-    2: true,
-    3: true,
-    4: true,
+    1: false,
+    2: false,
+    3: false,
+    4: false,
   };
 
   constructor(private router: Router) {}

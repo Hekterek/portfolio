@@ -6,7 +6,7 @@ import { MySkillsComponent } from './pages/myskills/my-skills.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
-import { AboutmeService, image } from './services/aboutme.service';
+import { image } from './services/aboutme.service';
 import { iconsResolve } from './services/my-skills.service';
 
 const routes: Routes = [

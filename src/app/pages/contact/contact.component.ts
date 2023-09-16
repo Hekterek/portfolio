@@ -11,6 +11,10 @@ import { EmailService } from 'src/app/services/email.service';
 export class ContactComponent implements OnInit, OnDestroy {
   emailPattern: RegExp = /^[a-z\d]+[\w.-]*@[a-z\d]+[a-z\d-]*\.[a-z]{2,63}$/i;
 
+  emailControlStatus!: string;
+  subjectControlStatus!: string;
+  messageControlStatus!: string;
+
   formContact = this.fb.group({
     email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
     subject: ['', [Validators.required]],
@@ -25,12 +29,23 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadContacts();
+    this.formControlsStatusListner();
   }
 
   ngOnDestroy(): void {
-    console.log(this.formContact.value);
-
     this.contactService.saveContactForm(this.formContact.value);
+  }
+
+  formControlsStatusListner() {
+    this.formContact.controls.email.statusChanges.subscribe((status) => {
+      this.emailControlStatus = status;
+    });
+    this.formContact.controls.subject.statusChanges.subscribe((status) => {
+      this.subjectControlStatus = status;
+    });
+    this.formContact.controls.message.statusChanges.subscribe((status) => {
+      this.messageControlStatus = status;
+    });
   }
 
   loadContacts() {
@@ -56,8 +71,16 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   sendEmail() {
-    this.emailService
-      .sendEmail(this.formContact.value)
-      .subscribe(() => this.formContact.reset());
+    if (!this.email?.valid) {
+      this.emailControlStatus = 'INVALID';
+    } else if (!this.subject?.valid) {
+      this.subjectControlStatus = 'INVALID';
+    } else if (!this.message?.valid) {
+      this.messageControlStatus = 'INVALID';
+    } else {
+      this.emailService
+        .sendEmail(this.formContact.value)
+        .subscribe(() => this.formContact.reset());
+    }
   }
 }

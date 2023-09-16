@@ -8,19 +8,21 @@
         <div class="formHeader">
             <div class="boxColumn">
                 <label for="email">Email</label>
-                <input name="email" id="email" formControlName="email" [ngClass]="{'valid': email?.valid}">
+                <input name="email" id="email" formControlName="email"
+                    [ngClass]="{'formControlValid': email?.valid, 'formControlInvalid': emailControlStatus == 'INVALID'}">
             </div>
             <div class="boxColumn">
                 <label for="subject">Subject</label>
-                <input name="subject" id="subject" formControlName="subject" [ngClass]="{'valid': subject?.valid}">
+                <input name="subject" id="subject" formControlName="subject"
+                    [ngClass]="{'formControlValid': subject?.valid, 'formControlInvalid': subjectControlStatus == 'INVALID'}">
             </div>
         </div>
         <div class="formFooter">
             <label for="message">Message</label>
             <textarea name="message" id="message" cols="30" rows="10" minlength="20" maxlength="500"
                 placeholder="I'm waiting for your message !" formControlName="message"
-                [ngClass]="{'valid': message?.valid}"></textarea>
-            <button type="submit" (click)="sendEmail()" [disabled]="formContact.invalid" class="submitBtn">Send</button>
+                [ngClass]="{'formControlValid': message?.valid, 'formControlInvalid': messageControlStatus == 'INVALID'}"></textarea>
+            <button type="submit" (click)="sendEmail()" class="submitBtn">Send</button>
         </div>
     </form>
 </section>

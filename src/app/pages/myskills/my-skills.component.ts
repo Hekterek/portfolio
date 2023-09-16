@@ -3,8 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { flipAnimation, pulseAnimation } from 'angular-animations';
 import {
   mainIconsModel,
-  otherIconsModel,
-  otherIconsResolveModel,
   otherIconsResolveUrlModel,
 } from 'src/app/models/my-skills';
 
@@ -13,8 +11,8 @@ import {
   templateUrl: './my-skills.component.html',
   styleUrls: ['./my-skills.component.scss'],
   animations: [
-    flipAnimation({ duration: 1500 }),
-    pulseAnimation({ scale: 1.3 }),
+    flipAnimation({ duration: 1000 }),
+    pulseAnimation({ scale: 1.4 }),
   ],
 })
 export class MySkillsComponent implements OnInit {
