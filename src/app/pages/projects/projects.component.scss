@@ -1,0 +1,71 @@
+@use "../../../partialsScss" as *;
+
+.projectsSection {
+  width: min(100%, 1300px);
+  margin: 0 auto;
+  padding: 50px 15px 50px 15px;
+
+  border: 1px solid red;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.imgBox {
+  width: 100%;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.descBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  & .name {
+    padding-bottom: 15px;
+    font-size: $fs-22to35-medium;
+    color: $clr-white;
+  }
+
+  & .desc {
+    line-height: 1.5rem;
+    color: $clr-text;
+  }
+
+  & .btn {
+    width: 150px;
+    height: 50px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    // background-color: #050801;
+    background-color: transparent;
+    color: #03e9f4;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 200px #03e9f4;
+    cursor: pointer;
+
+    @include screen900 {
+      //   box-shadow: initial;
+
+      &:hover {
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+          0 0 200px #03e9f4;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      }
+    }
+  }
+}
