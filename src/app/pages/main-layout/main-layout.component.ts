@@ -65,4 +65,8 @@ export class MainLayoutComponent implements OnInit {
       this.lightColors[this.currentLightIndex]
     } 0%, #000000 90%)`;
   }
+
+  getStateToAnimate(outlet: any) {
+    return outlet.activatedRouteData.state;
+  }
 }

@@ -21,10 +21,14 @@
   padding: 15px;
   padding-bottom: 45px;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-top: 90px;
+  // padding-left: 200px;
   // -ms-overflow-style: none;
   // scrollbar-width: none;
   // border: 1px solid blue;
+  // perspective: 1200px;
+  // transform-style: preserve-3d;
 
   @include screen900 {
     padding-top: 20px;

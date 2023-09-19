@@ -14,7 +14,11 @@ const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: WelcomeComponent, pathMatch: 'full' },
+      {
+        path: '',
+        component: WelcomeComponent,
+        pathMatch: 'full',
+      },
       {
         path: 'aboutme',
         component: AboutmeComponent,
