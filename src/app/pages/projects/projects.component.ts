@@ -20,6 +20,7 @@ export class ProjectsComponent {
       imgUrl: './assets/projectsImg/image.jpg',
       buttonValue: 'In progress',
       inProgress: true,
+      btn: false,
     },
   ];
 }
