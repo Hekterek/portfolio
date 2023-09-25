@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main-layout',
@@ -32,8 +33,15 @@ export class MainLayoutComponent implements OnInit {
   viewportWidth: number = 0;
   viewportHeight: number = 0;
 
+  constructor(private activatedRoute: ActivatedRoute) {}
+
   ngOnInit(): void {
     this.getScreenSize();
+  }
+
+  checkCurrentRoute() {
+    console.log(this.activatedRoute.);
+    
   }
 
   @HostListener('window:resize', ['$event'])
