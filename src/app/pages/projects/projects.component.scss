@@ -1,24 +1,53 @@
 @use "../../../partialsScss" as *;
 
 .projectsSection {
-  width: min(100%, 1300px);
+  width: min(100%, 1500px);
   margin: 0 auto;
   padding: 50px 15px 50px 15px;
 
-  border: 1px solid red;
+  @include screen1100 {
+    padding-top: 100px;
+  }
+
+  // border: 1px solid red;
 }
 
 .projectContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @include screen1100 {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .imgBox {
   width: 100%;
+  transition: all 0.6s ease;
+
+  // border: 1px solid red;
+
+  @include screen1100 {
+    width: 50%;
+
+    transform: perspective(800px) rotateY(25deg) scale(0.7) rotateX(10deg);
+
+    &:hover {
+      transform: perspective(800px) rotateY(-15deg) translateY(-50px)
+        rotateX(10deg) scale(0.9);
+    }
+  }
 
   & img {
-    width: 100%;
+    position: relative;
+    // top: 50%;
+    left: 50%;
+    width: min(100%, 600px);
+    transform: translate(-50%);
+    box-shadow: 0 60px 123px -45px hsla(225, 2%, 62%, 0.42),
+      0 35px 75px -45px hsla(225, 2%, 62%, 0.08);
   }
 }
 
@@ -27,6 +56,8 @@
   flex-direction: column;
   align-items: center;
   padding-top: 25px;
+
+  // border: 1px solid red;
   & .name {
     padding-bottom: 15px;
     font-size: $fs-22to35-medium;
@@ -35,13 +66,18 @@
 
   & .desc {
     line-height: 1.5rem;
+    max-width: 600px;
     color: $clr-text;
+
+    @include screen1100 {
+      max-width: 500px;
+    }
   }
 
   & .btn {
     width: 150px;
     height: 50px;
-    margin-top: 30px;
+    margin-top: 40px;
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -66,6 +102,10 @@
           0 0 200px #03e9f4;
         -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
       }
+    }
+
+    @include screen1100 {
+      margin-top: 30px;
     }
   }
 }
