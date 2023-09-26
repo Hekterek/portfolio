@@ -1,5 +1,5 @@
 <div class="mainContainer" #layout [style.background-position]="position" [style]="colorBG">
-    <div class="lampContainer">
+    <div class="lampContainer" *ngIf="currentRoute != '/projects'">
         <div class="light" [style]="lightColor"></div>
         <img class="lamp" src="./assets/photos/lampDiscoDone.png" alt="lamp">
         <button class="lampBtn" (click)="changeLightColor()"></button>

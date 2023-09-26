@@ -8,13 +8,11 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   projects: any = [
     {
-      name: 'Finance app',
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-      when an unknown printer took a galley of type and scrambled it to make a type 
-      specimen book.`,
+      name: 'IntelliFin',
+      desc: `Financial intelligence is a very important skill for every person. The InteliFin application solves the problem of money management and leads to achieving your financial goals as quickly as possible.`,
       imgUrl: './assets/projectsImg/image.jpg',
       buttonValue: 'In progress',
+      done: true,
     },
   ];
 }

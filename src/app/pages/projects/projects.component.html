@@ -6,7 +6,7 @@
         <div class="descBox">
             <p class="name">{{ project.name }}</p>
             <p class="desc">{{ project.desc }}</p>
-            <button class="btn">{{ project.buttonValue }}</button>
+            <button class="btn" [ngClass]="{'cursorPointer': project.done}">{{ project.buttonValue }}</button>
         </div>
     </div>
 </section>

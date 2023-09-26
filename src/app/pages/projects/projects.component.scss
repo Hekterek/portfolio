@@ -1,5 +1,9 @@
 @use "../../../partialsScss" as *;
 
+.cursorPointer {
+  cursor: pointer;
+}
+
 .projectsSection {
   width: min(100%, 1500px);
   margin: 0 auto;
@@ -31,11 +35,10 @@
 
   @include screen1100 {
     width: 50%;
-
     transform: perspective(800px) rotateY(25deg) scale(0.7) rotateX(10deg);
 
     &:hover {
-      transform: perspective(800px) rotateY(-15deg) translateY(-50px)
+      transform: perspective(800px) rotateY(-15deg) translateY(-15px)
         rotateX(10deg) scale(0.9);
     }
   }
@@ -90,7 +93,6 @@
     transition: 0.5s;
     box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
       0 0 200px #03e9f4;
-    cursor: pointer;
 
     @include screen900 {
       //   box-shadow: initial;

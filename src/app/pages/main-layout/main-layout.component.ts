@@ -1,5 +1,12 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Params,
+  Route,
+  Router,
+} from '@angular/router';
+import { Observable, filter, map } from 'rxjs';
 
 @Component({
   selector: 'app-main-layout',
@@ -7,6 +14,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./main-layout.component.scss'],
 })
 export class MainLayoutComponent implements OnInit {
+  routerListner!: any;
+  currentRoute!: any;
   lightColor: string = `background: linear-gradient(
     200deg,
     rgba(20, 82, 115, 0.87),
@@ -33,15 +42,19 @@ export class MainLayoutComponent implements OnInit {
   viewportWidth: number = 0;
   viewportHeight: number = 0;
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.checkCurrentRoute();
     this.getScreenSize();
   }
 
   checkCurrentRoute() {
-    console.log(this.activatedRoute.);
-    
+    this.routerListner = this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        this.currentRoute = this.router.url;
+      });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -72,9 +85,5 @@ export class MainLayoutComponent implements OnInit {
     this.colorBG = `background: radial-gradient(${
       this.lightColors[this.currentLightIndex]
     } 0%, #000000 90%)`;
-  }
-
-  getStateToAnimate(outlet: any) {
-    return outlet.activatedRouteData.state;
   }
 }
