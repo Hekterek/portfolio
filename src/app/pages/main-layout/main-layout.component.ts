@@ -27,15 +27,10 @@ export class MainLayoutComponent implements OnInit {
 
   lightColors: string[] = [
     'rgba(20, 82, 115, 0.87)',
-    'rgba(214, 48, 48, 0.87)',
-    'rgba(95, 255, 20, 0.60)',
-    'rgba(231, 255, 20, 0.60)',
     'rgba(20, 255, 255, 0.60)',
     'rgba(20, 130, 255, 0.87)',
     'rgba(130, 20, 255, 0.87)',
     'rgba(216, 20, 255, 0.87)',
-    'rgba(255, 20, 196, 0.87)',
-    'rgba(255, 20, 51, 0.87)',
   ];
 
   position: any = '';

@@ -2,6 +2,13 @@
 
 /* ABOUT SECTION SECTION */
 
+h2 {
+}
+
+h3 {
+  letter-spacing: 0.8rem;
+}
+
 .aboutSection {
   display: flex;
   flex-direction: column;
@@ -142,16 +149,17 @@
 
   & p {
     margin-top: 45px;
-    line-height: 1.6rem;
+    line-height: 1.7rem;
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: $clr-text;
+    letter-spacing: 0.1rem;
     // color: rgb(209, 209, 209);
   }
 
   @include screen500 {
     p {
-      width: 90%;
+      max-width: 90%;
       margin-left: 25px;
     }
   }
@@ -162,6 +170,7 @@
 
   @include screen900 {
     p {
+      max-width: 70%;
       margin-left: 35px;
     }
   }
@@ -210,6 +219,7 @@
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: $clr-text;
+    letter-spacing: 0.05rem;
   }
 
   & .favQuote {
@@ -299,6 +309,7 @@
     line-height: 1.6rem;
     font-family: "Rubik", sans-serif;
     font-weight: 400;
+    letter-spacing: 0.05rem;
     color: $clr-text;
   }
 
