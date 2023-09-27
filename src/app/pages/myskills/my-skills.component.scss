@@ -63,8 +63,9 @@
   }
 }
 
-.mainIcons .mainIcon:nth-child(2) img {
-  transform: translateY(10px);
+.mainIcons .mainIcon:nth-child(1) {
+  // transform: translateY(10px);
+  margin-bottom: 15px;
 }
 
 .mainIcon {
