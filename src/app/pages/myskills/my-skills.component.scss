@@ -63,6 +63,10 @@
   }
 }
 
+.mainIcons .mainIcon:nth-child(2) img {
+  transform: translateY(10px);
+}
+
 .mainIcon {
   display: flex;
   justify-content: center;
