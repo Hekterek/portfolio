@@ -78,9 +78,12 @@ export class ContactComponent implements OnInit, OnDestroy {
     } else if (!this.message?.valid) {
       this.messageControlStatus = 'INVALID';
     } else {
-      this.emailService
-        .sendEmail(this.formContact.value)
-        .subscribe(() => this.formContact.reset());
+      this.emailService.sendEmail(this.formContact.value).subscribe(() => {
+        this.formContact.reset();
+        this.emailControlStatus = 'VALID';
+        this.subjectControlStatus = 'VALID';
+        this.messageControlStatus = 'VALID';
+      });
     }
   }
 }
