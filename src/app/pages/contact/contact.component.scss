@@ -21,7 +21,7 @@ input:-webkit-autofill:active {
   flex-direction: column;
   align-items: center;
   width: min(100%, 1300px);
-  margin: 0 auto;
+  margin: 0 auto 75px auto;
 
   @include screen1100 {
     padding-right: 50px;
