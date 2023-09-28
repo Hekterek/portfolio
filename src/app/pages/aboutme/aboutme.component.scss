@@ -2,11 +2,24 @@
 
 /* ABOUT SECTION SECTION */
 
+h1 {
+  margin: 15px 0 0 15vw;
+  font-weight: 600;
+  font-size: $fs-40to80-big;
+  color: white;
+  font-family: "Mooli", sans-serif;
+}
+
 h2 {
+  margin-left: 12vw;
+  font-weight: 600;
+  font-size: clamp(1.375rem, 1.0456rem + 1.4054vw, 2.1875rem);
+  color: white;
 }
 
 h3 {
-  letter-spacing: 0.8rem;
+  font-size: 1.2rem;
+  // letter-spacing: 0.8rem;
 }
 
 .aboutSection {
@@ -27,19 +40,14 @@ h3 {
 
 .aboutInfo {
   //   border: 1px solid rgb(60, 238, 15);
-  & h1 {
-    margin: 15px 0 0 15vw;
-    font-weight: 600;
-    font-size: $fs-40to80-big;
-    color: white;
-  }
 
   & p {
     // margin-left: 25px;
     margin-left: 8vw;
     font-family: "Rubik", sans-serif;
     font-weight: 400;
-    color: $clr-text;
+    color: #a7c3ff;
+    letter-spacing: 0.07rem;
   }
 
   & p:nth-of-type(1) {
@@ -140,20 +148,12 @@ h3 {
   color: #8892b0;
   //   border: 1px solid blue;
 
-  & h2 {
-    margin-left: 12vw;
-    font-weight: 600;
-    font-size: clamp(1.375rem, 1.0456rem + 1.4054vw, 2.1875rem);
-    color: white;
-  }
-
   & p {
     margin-top: 45px;
     line-height: 1.7rem;
-    font-family: "Rubik", sans-serif;
+    font-size: 1.1rem;
     font-weight: 400;
     color: $clr-text;
-    letter-spacing: 0.1rem;
     // color: rgb(209, 209, 209);
   }
 
@@ -199,12 +199,12 @@ h3 {
   margin-top: 125px;
   margin: 125px auto 0 auto;
 
-  & h2 {
-    margin-left: 12vw;
-    font-weight: 600;
-    font-size: $fs-22to35-medium;
-    color: white;
-  }
+  // & h2 {
+  //   margin-left: 12vw;
+  //   font-weight: 600;
+  //   font-size: $fs-22to35-medium;
+  //   color: white;
+  // }
 
   & .factTitle {
     margin: 45px 0 0 0;
@@ -216,7 +216,6 @@ h3 {
   & .factDesc {
     margin-top: 25px;
     line-height: 1.6rem;
-    font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: $clr-text;
     letter-spacing: 0.05rem;
@@ -290,12 +289,12 @@ h3 {
   margin-bottom: 80px;
   margin: 80px auto 80px auto;
 
-  & h2 {
-    margin-left: 10vw;
-    font-weight: 600;
-    font-size: $fs-22to35-medium;
-    color: white;
-  }
+  // & h2 {
+  //   margin-left: 10vw;
+  //   font-weight: 600;
+  //   font-size: $fs-22to35-medium;
+  //   color: white;
+  // }
 
   & .ruleTitle {
     margin: 45px 0 0 0;
@@ -307,7 +306,6 @@ h3 {
   & .ruleDesc {
     margin-top: 25px;
     line-height: 1.6rem;
-    font-family: "Rubik", sans-serif;
     font-weight: 400;
     letter-spacing: 0.05rem;
     color: $clr-text;
@@ -363,7 +361,6 @@ h3 {
     max-width: 500px;
     text-align: center;
     line-height: 1.6rem;
-    font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: $clr-text;
   }
