@@ -12,8 +12,6 @@
   @include screen1100 {
     padding-top: 100px;
   }
-
-  // border: 1px solid red;
 }
 
 .projectContainer {
@@ -31,8 +29,6 @@
   width: 100%;
   transition: all 0.6s ease;
 
-  // border: 1px solid red;
-
   @include screen1100 {
     width: 50%;
     transform: perspective(800px) rotateY(25deg) scale(0.7) rotateX(10deg);
@@ -45,16 +41,11 @@
 
   & img {
     position: relative;
-    // top: 50%;
     left: 50%;
     width: min(100%, 600px);
     transform: translate(-50%);
     box-shadow: 3px 3px 20px 10px hsla(0, 0%, 0%, 0.575);
     transition: box-shadow 0.5s;
-
-    &:hover {
-      // box-shadow: 0 6px 20px 15px hsla(0, 0%, 0%, 0.575);
-    }
   }
 }
 
@@ -65,7 +56,6 @@
   padding-top: 25px;
   letter-spacing: 0.1rem;
 
-  // border: 1px solid red;
   & .name {
     padding-bottom: 15px;
     font-size: $fs-22to35-medium;
@@ -91,7 +81,6 @@
     font-weight: bold;
     font-size: 1rem;
     letter-spacing: 4px;
-    // background-color: #050801;
     background-color: transparent;
     color: #03e9f4;
     overflow: hidden;
@@ -99,8 +88,6 @@
     box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4;
 
     @include screen900 {
-      //   box-shadow: initial;
-
       &:hover {
         background: #03e9f4;
         color: #050801;

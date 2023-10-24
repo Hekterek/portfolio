@@ -20,11 +20,10 @@
         <div class="formFooter">
             <label for="message">Message</label>
             <textarea name="message" id="message" cols="30" rows="10" minlength="20" maxlength="500"
-                placeholder="I'm waiting for your message !" formControlName="message"
-                [ngClass]="{'formControlValid': message?.valid, 'formControlInvalid': messageControlStatus == 'INVALID'}"></textarea>
+                formControlName="message" [placeholder]="messagePlaceholder"
+                [ngClass]="{'formControlValid': message?.valid, 'formControlInvalid': messageControlStatus == 'INVALID'}"
+                [value]="messageValue"></textarea>
             <button type="submit" (click)="sendEmail()" class="submitBtn">Send</button>
         </div>
     </form>
 </section>
-
-<ng-template>Thanks for your message !</ng-template>

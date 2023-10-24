@@ -1,12 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  Params,
-  Route,
-  Router,
-} from '@angular/router';
-import { Observable, filter, map } from 'rxjs';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-main-layout',

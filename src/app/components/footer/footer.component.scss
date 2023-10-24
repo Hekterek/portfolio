@@ -1,4 +1,4 @@
-@use "../../../partialsScss" as scss;
+@use "../../../partialsScss" as *;
 
 .footer {
   display: flex;
@@ -15,9 +15,8 @@
     color: white;
   }
 
-  @include scss.screen1300 {
+  @include screen1300 {
     justify-content: flex-start;
     padding-left: 390px;
-    // transform: translateX(-100px);
   }
 }

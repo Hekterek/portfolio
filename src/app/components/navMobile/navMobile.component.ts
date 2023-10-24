@@ -27,9 +27,7 @@ export class NavMobileComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    // this.menuIntervalOpen();
-  }
+  ngOnInit(): void {}
 
   menuSwitch() {
     this.menuBtnDisable = !this.menuBtnDisable;

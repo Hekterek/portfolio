@@ -46,7 +46,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  // border: 1px solid red;
 }
 
 .mainIcons {
@@ -56,15 +55,12 @@
   width: min(100%, 600px);
   margin-top: 45px;
 
-  // border: 1px solid blue;
-
   @include screen900 {
     margin-top: 50px;
   }
 }
 
 .mainIcons .mainIcon:nth-child(1) {
-  // transform: translateY(10px);
   margin-bottom: 15px;
 }
 
@@ -73,8 +69,6 @@
   justify-content: center;
   align-items: center;
   width: 90px;
-
-  // border: 1px solid red;
 
   & img {
     width: 100%;
@@ -95,15 +89,10 @@
 .otherIcons {
   display: flex;
   justify-content: center;
-  // align-items: center;
   flex-wrap: wrap;
   margin-top: 85px;
   gap: 15px;
   width: min(90%, 900px);
-
-  // @include screen700 {
-  //   width: 90%;
-  // }
 }
 
 .icon {

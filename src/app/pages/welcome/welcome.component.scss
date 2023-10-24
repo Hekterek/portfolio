@@ -106,10 +106,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: min(100%, 1300px);
+  width: 100%;
   margin: 0 auto;
-
-  // @include debug;
 
   @include screen1100 {
     padding-right: 50px;
@@ -119,7 +117,7 @@
     padding-right: 80px;
   }
 
-  @include screen1600 {
+  @include screen1700 {
     padding-right: 200px;
   }
 }
@@ -131,19 +129,15 @@
 
   @include screen600 {
   }
-
-  // @include debug;
 }
 
 .title {
   margin: 55px 0 0 15px;
   line-height: 3rem;
-  // font-family: "Roboto", sans-serif;
 
   font-weight: 500;
   font-size: $fs-40to80-big;
   color: white;
-  // @include scss.debug;
 
   @include screen500 {
     line-height: 3.3rem;
@@ -165,7 +159,7 @@
   @include screen1100 {
     line-height: 5.7rem;
   }
-  @include screen1400 {
+  @include screen1700 {
     margin: 140px 0 0 0px;
     line-height: 3.2rem;
   }
@@ -177,18 +171,17 @@
 
 .titleSecond {
   margin: 0 0 0 5vw;
-  // font-size: 18px;
 
-  @include screen1400 {
-    margin: 0 0 0 160px;
+  @include screen1700 {
+    margin: 0 0 0 170px;
   }
 }
 
 .titleThird {
   margin: 0 0 0 9vw;
 
-  @include screen1400 {
-    margin: 0 0 0 520px;
+  @include screen1700 {
+    margin: 0 0 0 560px;
   }
 }
 
@@ -201,7 +194,7 @@
     font-size: 22px;
   }
 
-  @include screen1400 {
+  @include screen1700 {
     transform: translateY(-15px);
     margin: 0px 440px 0px 0px;
   }
@@ -215,8 +208,6 @@
   font-size: 16px;
   color: white;
 
-  // @include debug;
-
   & p {
     text-align: center;
   }
@@ -227,24 +218,6 @@
   & p:nth-of-type(2) {
     margin-top: 15px;
   }
-
-  // & .contactBtn {
-  //   margin-top: 100px;
-  //   width: 250px;
-  //   height: 60px;
-  //   background-color: transparent;
-  //   border: 1px solid gray;
-  //   color: white;
-  //   font-weight: 800;
-  //   font-size: 18px;
-  //   letter-spacing: 1px;
-  //   cursor: pointer;
-
-  //   &:hover {
-  //     background-color: gray;
-  //     color: black;
-  //   }
-  // }
 }
 
 /* BUTTON */
@@ -263,11 +236,9 @@
   border-radius: 0.45em;
   background: none;
   perspective: 2em;
-  // font-family: "Raleway", sans-serif;
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 2em;
   font-weight: 900;
-  // letter-spacing: 1em;
 
   -webkit-box-shadow: inset 0px 0px 0.5em 0px hsl(186 100% 69%),
     0px 0px 0.5em 0px hsl(186 100% 69%);
@@ -284,7 +255,6 @@
   @include screen900 {
     &:hover {
       color: rgba(78, 78, 78, 0.8);
-      // color: transparent;
       text-shadow: none;
       animation: none;
     }
@@ -320,7 +290,6 @@
 
 .glowing-txt {
   float: left;
-  // margin-right: -0.8em;
   -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
     0 0 0.45em hsl(186 100% 69%);
   -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),

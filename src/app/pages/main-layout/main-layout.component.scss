@@ -1,34 +1,22 @@
 @use "../../../partialsScss" as *;
 
 .mainContainer {
-  // width: min(100%, 1300px);
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  // background: radial-gradient(#a23982, #1f1013);
-  // background: radial-gradient(rgb(20, 82, 115) 0%, #000000 90%);
   @include screen900 {
     display: flex;
   }
 }
 
 .routerContainer {
-  // display: flex;
-  // justify-content: center;
   position: relative;
   width: 100%;
   height: 100vh;
   padding: 15px;
   padding-bottom: 45px;
   overflow-y: auto;
-  // overflow-x: hidden;
   padding-top: 90px;
-  // padding-left: 200px;
-  // -ms-overflow-style: none;
-  // scrollbar-width: none;
-  // border: 1px solid blue;
-  // perspective: 1200px;
-  // transform-style: preserve-3d;
 
   @include screen900 {
     padding-top: 20px;
@@ -40,22 +28,14 @@
   position: absolute;
   top: 0;
   right: 0px;
-  // transform: scale(0.8);
-  // width: 250px;
-  // @include debug;
 }
 
 .lamp {
-  // z-index: 3;
   display: none;
   position: fixed;
   top: -18px;
   right: 20px;
   width: 180px;
-  // margin-left: 45vw;
-  // transform: rotate(10deg);
-
-  // @include debug;
 
   @include screen1100 {
     display: block;
@@ -108,18 +88,11 @@
 
 .light {
   display: none;
-  // z-index: 4;
   position: relative;
   top: 100px;
   right: 130px;
   width: 300px;
   height: 300px;
-  // background-color: gray;
-  // background: linear-gradient(
-  //   200deg,
-  //   rgba(255, 20, 51, 0.87),
-  //   rgba(255, 255, 255, 0) 70%
-  // );
   clip-path: polygon(0 36%, 100% 0, 56% 100%, 14% 76%);
 
   @include screen1100 {

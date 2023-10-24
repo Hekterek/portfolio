@@ -50,6 +50,11 @@
     @content;
   }
 }
+@mixin screen1700 {
+  @media screen and (min-width: 1650px) {
+    @content;
+  }
+}
 
 @mixin debug {
   border: 1px solid red;
